@@ -13,12 +13,7 @@ public class ReflectionDemo {
 		try {
 			method = obj.getClass().getMethod("doSomething", null);
 			method.invoke(obj, null,1);
-		} catch (NoSuchMethodException | SecurityException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException | IllegalArgumentException
-				| InvocationTargetException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 

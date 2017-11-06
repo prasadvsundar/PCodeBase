@@ -1,11 +1,21 @@
 package com.nanobi.innerclass;
 
 public class InnerClass {
-	public static void main(String[] args) {
+	public static void main(String... args) {
+			InnTest inT = new InnTest();
+			inT.display();
+			InnTest.Inner inn = new InnTest().new Inner();
+			System.out.println();
+			
+			
+		}
+	public static void pmain(String args[]) {
 	/*	InnTest inT = new InnTest();
 		inT.display();
 		InnTest.Inner inn = new InnTest().new Inner();*/
-		System.out.println(null);
+		System.out.println();
+		
+		
 	}
 }
 
