@@ -1,15 +1,19 @@
 package com.codebase.programs.utill;
 
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Fibonacii {
 	public static void main(String[] args) {
 		Fibonacii f =new Fibonacii();
-		System.out.println(f.fib(100));
+		//System.out.println(f.fib(100));
+		for(int i=0; i<1000000; i++) {
+			System.out.print(f.fib(BigInteger.valueOf(i))+" ");
+		}
 	}
 	Map<Long, Long> fibMap = new HashMap<Long, Long>();
-	public long fib(long i) {
+	/*public long fib(long i) {
 		if(i == 1 || i == 2) {
 			//System.out.print(1);
 			return (long) 1;
@@ -31,6 +35,33 @@ public class Fibonacii {
 			long num = n1 +n2;
 			
 			return num;
+		}
+	}*/
+	
+	public int fibInt(int n) {
+		if(n==0)
+			return 0;
+		if(n==1)
+			return 1;
+		else
+			return fibInt(n-1)+fibInt(n-2);
+		
+	}
+	
+	/**
+	 * BigInteger 
+	 * @param n
+	 * @return
+	 */
+	public BigInteger fib(BigInteger n) {
+		if (n.equals(BigInteger.valueOf(0)))
+			return BigInteger.valueOf(0);
+		if (n.equals(BigInteger.valueOf(1))) {
+			return BigInteger.valueOf(1);
+		} else {
+			BigInteger f1 = fib(n.subtract(BigInteger.valueOf(1)));
+			BigInteger f2 = fib(n.subtract(BigInteger.valueOf(2)));
+			return f1.add(f2);
 		}
 	}
 }
