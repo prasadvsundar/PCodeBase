@@ -3,11 +3,12 @@ package com.codebase.list;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class FaileFastFaileSafe {
 	
-	/*public static void main(String[] args) {
+	public static void main(String[] args) {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 	    
 	    //Adding elements to list
@@ -23,17 +24,31 @@ public class FaileFastFaileSafe {
 	    list.add(3845);
 	     
 	    //Getting an Iterator from list
-	     
-	    Iterator<Integer> it = list.iterator();
-	     
+	    
+	    /*for(int i=0; i<list.size();i++){
+	    	  //list.add(8457); 
+	    	  list.remove(i);
+	    }*/
+	 /*   ListIterator<Integer> it= list.listIterator();
+	    while (it.hasNext()){
+	        Integer integer = (Integer) it.next(); 
+	        System.out.println(integer);
+	        it.next();
+	        //it.
+	        it.previous();
+	      //  it.remove();
+	        //list.remove(integer);      //This will throw ConcurrentModificationException
+	    }
+	     */
+	   Iterator<Integer> it = list.iterator();
 	    while (it.hasNext()){
 	        Integer integer = (Integer) it.next();
-	         
-	        list.add(8457);      //This will throw ConcurrentModificationException
-	    }
-	}*/
+	        it.remove();
+	       // list.add(8457);      //This will throw ConcurrentModificationException
+	    }*/
+	}
 	
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		List <String> cityList = new CopyOnWriteArrayList<String>();
 		  cityList.add("New York City");
 		  cityList.add("New Delhi");
@@ -48,7 +63,7 @@ public class FaileFastFaileSafe {
 		         }
 		  System.out.println(cityList);
 		 }
-
+*/
 	
 	
 }
