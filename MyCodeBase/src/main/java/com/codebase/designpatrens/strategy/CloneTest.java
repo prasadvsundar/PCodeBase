@@ -8,7 +8,7 @@ public static void main(String[] args) throws CloneNotSupportedException {
      t1.c = 30;
 
      Test3 t2 = (Test3)t1.clone();
-//return statement in finally count down latch
+     //return statement in finally count down latch
      // Creating a copy of object t1 and passing
      //  it to t2
 
