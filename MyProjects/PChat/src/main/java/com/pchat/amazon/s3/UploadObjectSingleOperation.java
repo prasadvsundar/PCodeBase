@@ -28,7 +28,7 @@ public class UploadObjectSingleOperation {
     }
 	
 	public void upload(){
-		AWSCredentials awsCredentials = new BasicAWSCredentials("AKIAJO76VIFQ6ALXXZFA", "F3Lwx8Zu2pvPTUp4uJY5w7zoTuBeXdlydJKniuuz");
+		AWSCredentials awsCredentials = new BasicAWSCredentials("", "");
 		 ClientConfiguration clientConfig = new ClientConfiguration();
 		 clientConfig.setProtocol(Protocol.HTTP);
 		 
