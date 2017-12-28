@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>P-Chat</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="resources/styles.css" type="text/css"/>
+         <script src="resources/js/jquery-1.11.3.js"></script>
+        <script src="resources/chat.js"></script>
+    </head>
+   <!--  <body onload="connect();" onunload="disconnect();"> -->
+     <body onload="" onunload="disconnect();">
+        
+        <div id="chatDiv">
+        <h1> P-Chat </h1>
+        <textarea id="messages" class="panel message-area" readonly ></textarea>
+        <div class="panel input-area" id="inputDiv">
+            <input id="userName" class="text-field" type="text" placeholder="Name"/>
+            <input class="button" id="connect_button" type="submit" value="Connect" onclick="" />
+            <input id="messageInput" class="text-field" type="text" placeholder="Message" 
+                   onkeydown="if (event.keyCode == 13) sendMessage();" />
+            <input class="button" type="submit" value="Send" onclick="sendMessage();" />
+        </div>
+        </div>
+    </body>
+</html>
